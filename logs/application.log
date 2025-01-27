@@ -1,0 +1,98 @@
+2025-01-26 16:32:54.212 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-26 16:32:57.962 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-26 16:33:05.235 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): awdd
+2025-01-26 16:33:06.234 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:06.769 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): dd
+2025-01-26 16:33:06.945 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:07.108 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:07.263 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:07.432 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:07.609 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): 
+2025-01-26 16:33:07.798 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): daw
+2025-01-26 16:33:10.029 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): daddd
+2025-01-26 16:33:11.323 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:12.263 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:13.031 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:18.583 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): dd
+2025-01-26 16:33:19.535 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): d
+2025-01-26 16:33:19.860 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): 
+2025-01-26 16:33:20.070 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): 
+2025-01-26 16:33:21.251 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): dd
+2025-01-26 16:33:23.043 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): dddd
+2025-01-26 16:33:25.317 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 16:02:23.860 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 16:02:24.146 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 16:02:25.224 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-2 joined the server
+2025-01-27 16:02:26.324 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 joined the server
+2025-01-27 16:02:27.439 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-4 joined the server
+2025-01-27 16:02:33.138 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): ?????
+2025-01-27 16:02:38.350 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): hello every one
+2025-01-27 16:02:44.709 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): hw are yall?
+2025-01-27 16:02:50.121 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-2): hi
+2025-01-27 16:02:52.513 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-3): hi
+2025-01-27 16:02:56.244 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-4): hoi
+2025-01-27 16:03:29.436 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] private message (client-2) -> (client-4) : lick my balls and swallow my cock
+2025-01-27 17:28:34.645 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 17:28:38.402 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 17:29:00.817 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 17:29:19.071 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 17:29:22.724 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 17:30:30.190 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 17:35:46.890 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 17:35:50.162 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 17:35:55.092 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 17:36:30.976 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 17:36:31.262 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 17:36:38.009 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 17:40:54.790 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 17:40:57.859 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 17:41:02.814 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 17:42:08.492 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 17:42:10.242 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 17:42:12.881 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 18:50:34.200 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 18:51:47.245 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 18:51:55.603 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-2 joined the server
+2025-01-27 18:51:57.842 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 joined the server
+2025-01-27 18:52:01.944 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-4 joined the server
+2025-01-27 18:52:08.385 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-4): Hello every one
+2025-01-27 18:52:15.116 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-2): Hi there'
+2025-01-27 18:52:22.986 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-2 left the server
+2025-01-27 18:52:41.290 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] private message (client-4) -> (client-1) : listen to me
+2025-01-27 18:52:58.813 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): [A
+2025-01-27 18:53:09.463 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): [A[A-p client-1: what?
+2025-01-27 18:53:25.327 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 18:53:27.106 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 left the server
+2025-01-27 18:54:29.613 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 18:54:47.514 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 18:54:49.189 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-2 joined the server
+2025-01-27 18:54:50.687 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 joined the server
+2025-01-27 18:54:52.100 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-4 joined the server
+2025-01-27 18:54:57.416 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): Hello every one
+2025-01-27 18:55:01.656 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-2): Hi there
+2025-01-27 18:55:04.522 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-3): hello
+2025-01-27 18:55:07.121 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-4): ...
+2025-01-27 18:55:12.191 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-4 left the server
+2025-01-27 18:55:32.027 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] private message (client-2) -> (client-3) : do you know me?
+2025-01-27 18:55:40.941 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 left the server
+2025-01-27 18:56:00.799 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): ???
+2025-01-27 18:56:20.942 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): 
+2025-01-27 18:57:46.862 [main] INFO  ua.ithillel.com.net.SocketServer - [SERVER] started on port 8000
+2025-01-27 18:57:51.630 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 joined the server
+2025-01-27 18:57:52.755 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-2 joined the server
+2025-01-27 18:57:53.740 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 joined the server
+2025-01-27 18:57:54.762 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-4 joined the server
+2025-01-27 18:57:59.607 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-4): Hello everyone
+2025-01-27 18:58:03.154 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-3): yeah
+2025-01-27 18:58:05.115 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-1): hi
+2025-01-27 18:58:09.576 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-2): hello there
+2025-01-27 18:58:13.287 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-3): bye
+2025-01-27 18:58:15.352 [Thread-2] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-3 left the server
+2025-01-27 18:58:31.091 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] private message (client-1) -> (client-2) : do u hear me?
+2025-01-27 18:58:47.415 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] private message (client-2) -> (client-1) : Yes. It` private chat
+2025-01-27 18:58:55.995 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-4): are you still here?
+2025-01-27 18:58:57.739 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-4): ///
+2025-01-27 18:58:59.285 [Thread-3] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-4 left the server
+2025-01-27 18:59:03.793 [Thread-0] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-1 left the server
+2025-01-27 18:59:07.713 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] global message (client-2): ...
+2025-01-27 18:59:10.433 [Thread-1] INFO  ua.ithillel.com.net.SocketServer - [SERVER] client-2 left the server
