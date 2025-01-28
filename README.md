@@ -35,7 +35,7 @@ This project implements a multi-client server capable of handling an unlimited n
 ## Example
 1. **Usage**
 
-![2025-01-27 18-57-48.gif](img/2025-01-27%2018-57-48.gif)
+![2025-01-2900-31-37.gif](img/2025-01-2900-31-37.gif)
 2. **Log Output**: 
 
 ```

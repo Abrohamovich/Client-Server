@@ -5,23 +5,23 @@ import ua.ithillel.com.net.handler.ServerHandler;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Arrays;
 import java.util.Objects;
-import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class CmdSocketClient implements ClientHandler, Runnable {
+    private String privateChatUsername = null;
     private final Socket socket;
     private final String username;
     private final ServerHandler serverHandler;
     private BufferedReader in;
     private PrintWriter out;
 
-    private static final Set<String> helpMessage = Set.of(
-            "-h\tTo write help text",
-            "-exit\tTo exit from the server",
-            "-p username:message\tTo send private message to user");
+    private static final String[] helpMessage = {
+            "-h\tWrite user commands",
+            "-exit\tExit from the server",
+            "-global\tEnter the global chat",
+            "-all\tSee the list of active users",
+            "-p username\tEnter the private chat with user"
+    };
 
     public CmdSocketClient(Socket socket, ServerHandler serverHandler, int clientId) {
         this.serverHandler = serverHandler;
@@ -37,26 +37,65 @@ public class CmdSocketClient implements ClientHandler, Runnable {
             serverHandler.onConnect(this);
 
             out.println("Herzlich Willkommen " + username);
-            out.flush();
-            helpMessage.forEach(this::receiveMessage);
+            out.println("By default you send messages to the server");
+            for (String line : helpMessage) {
+                out.println(line);
+                out.flush();
+            }
 
             while (!socket.isClosed()) {
                 String message = in.readLine();
-                if (message.trim().equals("-exit")) {
-                    break;
-                } else if (message.trim().startsWith("-p")) {
-                    String[] extractedParts = extract(message.trim());
-                    if (extractedParts.length != 2) {
-                        out.print("Invalid private message format. Use: -p username: message");
-                        out.flush();
-                        continue;
+
+                if (message == null) continue;
+
+                if (message.startsWith("-")) {
+                    switch (message.trim()) {
+                        case "-exit":
+                            socket.close();
+                            break;
+                        case "-h":
+                            for (String line : helpMessage) {
+                                out.println(line);
+                                out.flush();
+                            }
+                            break;
+                        case "-all":
+                            serverHandler.onAll(this);
+                            break;
+                        case "-global":
+                            privateChatUsername = null;
+                            out.println("You are now in global chat mode");
+                            out.flush();
+                            break;
+                        default:
+                            if (message.startsWith("-p ")) {
+                                String[] parts = message.split(" ", 2);
+                                if (parts.length == 2) {
+                                    privateChatUsername = parts[1].trim();
+                                    if (privateChatUsername.equals(username)) {
+                                        out.println("You cant sand messages to yourself");
+                                        out.flush();
+                                        privateChatUsername = null;
+                                        break;
+                                    }
+                                    out.println("You are now in private chat mode with " + privateChatUsername);
+                                    out.flush();
+                                } else {
+                                    out.println("Usage: -p username");
+                                    out.flush();
+                                }
+                            } else {
+                                out.println("Unknown command. Use -h for help.");
+                                out.flush();
+                            }
+                            break;
                     }
-                    if (extractedParts[0].equals(username)) continue;
-                    serverHandler.onPrivateMessage(this, extractedParts[0], extractedParts[1]);
-                } else if (message.trim().equals("-h")) {
-                    helpMessage.forEach(this::receiveMessage);
                 } else {
-                    serverHandler.onGlobalMessage(this, message.trim());
+                    if (privateChatUsername == null) {
+                        serverHandler.onGlobalMessage(this, message);
+                    } else {
+                        serverHandler.onPrivateMessage(this, privateChatUsername, message);
+                    }
                 }
             }
         } catch (IOException ex) {
@@ -67,7 +106,7 @@ public class CmdSocketClient implements ClientHandler, Runnable {
     }
 
     @Override
-    public void receiveMessage(String message) {
+    public void getMessage(String message) {
         out.println(message);
         out.flush();
     }
@@ -77,18 +116,9 @@ public class CmdSocketClient implements ClientHandler, Runnable {
         return username;
     }
 
-    private String[] extract(String s) {
-        String patternString = "-p\\s+(.*)\\s*:\\s*(.*)";
-        Pattern pattern = Pattern.compile(patternString);
-        Matcher matcher = pattern.matcher(s);
-
-        if (matcher.matches()) {
-            String clientId = matcher.group(1);
-            String message = matcher.group(2);
-            return new String[]{clientId, message};
-        } else {
-            return new String[0];
-        }
+    @Override
+    public void setPrivateChatUsername(String username) {
+        privateChatUsername = username;
     }
 
     @Override

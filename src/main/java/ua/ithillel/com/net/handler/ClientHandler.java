@@ -1,6 +1,7 @@
 package ua.ithillel.com.net.handler;
 
 public interface ClientHandler {
-    void receiveMessage(String message);
+    void getMessage(String message);
     String getUsername();
+    void setPrivateChatUsername(String username);
 }

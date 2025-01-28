@@ -11,6 +11,7 @@ import java.net.Socket;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class SocketServer implements ServerHandler, AutoCloseable {
     private static final Logger log = LogManager.getLogger(SocketServer.class);
@@ -53,7 +54,7 @@ public class SocketServer implements ServerHandler, AutoCloseable {
         activeConnections.forEach(connection ->
         {
             if (!connection.getUsername().equals(username)) {
-                connection.receiveMessage(String.format(USER_JOINED_MESSAGE, username));
+                connection.getMessage(String.format(USER_JOINED_MESSAGE, username));
             }
         });
         activeConnections.add(clientHandler);
@@ -66,7 +67,7 @@ public class SocketServer implements ServerHandler, AutoCloseable {
 
         activeConnections.forEach(connection ->
         {
-            connection.receiveMessage(String.format(USER_LEFT_MESSAGE, username));
+            connection.getMessage(String.format(USER_LEFT_MESSAGE, username));
         });
         log.info("[SERVER] {} left the server", clientHandler.getUsername());
     }
@@ -78,7 +79,7 @@ public class SocketServer implements ServerHandler, AutoCloseable {
         activeConnections.forEach(connection ->
         {
             if (!connection.getUsername().equals(username)) {
-                connection.receiveMessage(String.format(GLOBAL_MESSAGE, username, message));
+                connection.getMessage(String.format(GLOBAL_MESSAGE, username, message));
             }
         });
 
@@ -86,19 +87,28 @@ public class SocketServer implements ServerHandler, AutoCloseable {
     }
 
     @Override
-    public void onPrivateMessage(ClientHandler clientHandler, String username, String message) {
+    public void onPrivateMessage(ClientHandler clientHandler, String to, String message) {
         ClientHandler client = activeConnections.stream()
-                .filter(c -> c.getUsername().equals(username))
+                .filter(c -> c.getUsername().equals(to))
                 .findFirst()
                 .orElse(null);
 
         if (client == null) {
-            clientHandler.receiveMessage(String.format(USER_NOT_FOUND_MESSAGE, username));
+            clientHandler.getMessage(String.format(USER_NOT_FOUND_MESSAGE, to));
+            clientHandler.setPrivateChatUsername(null);
             return;
         }
 
-        log.info("[SERVER] private message ({}) -> ({}) : {}", clientHandler.getUsername(), username, message);
-        client.receiveMessage(String.format(PRIVATE_MESSAGE, username, message));
+        log.info("[SERVER] private message ({}) -> ({}) : {}", clientHandler.getUsername(), to, message);
+        client.getMessage(String.format(PRIVATE_MESSAGE, clientHandler.getUsername(), message));
+    }
+
+    @Override
+    public void onAll(ClientHandler clientHandler) {
+        String message = activeConnections.stream()
+                .map(ClientHandler::getUsername)
+                .collect(Collectors.joining(", "));
+        clientHandler.getMessage("Active users: " + message);
     }
 
     @Override
@@ -108,14 +118,14 @@ public class SocketServer implements ServerHandler, AutoCloseable {
         activeConnections.forEach(connection ->
         {
             if (!connection.getUsername().equals(username)) {
-                connection.receiveMessage(String.format(SOMETHING_WENT_WRONG, username));
+                connection.getMessage(String.format(SOMETHING_WENT_WRONG, username));
             }
         });
     }
 
     @Override
     public void close() throws Exception {
-        activeConnections.forEach(c -> c.receiveMessage("Server is shutting down"));
+        activeConnections.forEach(c -> c.getMessage("Server is shutting down"));
         serverSocket.close();
     }
 }
