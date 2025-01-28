@@ -21,16 +21,14 @@ This project implements a multi-client server capable of handling an unlimited n
   `[SERVER] private message (client-1) -> (client-2) : message`
 
   `[SERVER] error happened error-message`
-- **Command Support**:
-    - `exit`: Disconnects the client from the server and removes it from the active connections list.
-    - `-p username: message`: Sends a private message to the specified client.
-    - `-h`: To write help text.
 
 ### Client
 - **Server Connection**: Clients can connect to the server.
 - **Command Sending**: Clients can send commands, including:
     - Disconnecting from the server using the `exit` command.
-    - Sending private messages to other clients using `-p username: message`.
+    - Enter private room with user `-p username`.
+    - Leave the private room `-global`
+    - List all active users `-all`
 
 ## Example
 1. **Usage**
